@@ -1,0 +1,113 @@
+Azu Eleonu
+aeleonu@bu.edu
+Professor Stevens
+30 June 2016
+
+TABLES WITH HEURISTICS:
+    
+5-move
+-------------------------------------
+algorithm              num. solved     avg. moves    avg. states tested
+----------------------------------------------------------------------
+random                 |   10       |     5       |      664.0      |
+BFS                    |   10       |     5       |       47.1      |
+DFS with 20            |    3       |   575.6     |      588.0      |
+DFS with 50            |    3       |   575.6     |      588.0      |
+GreedySearcher         |   10       |    5.4      |       70.3      |
+GreedySearcher (2)     |   10       |    6.2      |       7.8       |
+A*                     |   10       |    5.4      |       6.5       |
+A* (2)                 |   10       |    5.0      |       7.1       |
+
+
+10-move
+-------------------------------------
+algorithm                  num. solved   avg. moves   avg. states tested
+-------------------------------------------------------------------------
+random                    |    5       |   10.0      |      1504.0     |
+BFS                       |   10       |   10.       |       747.4     |
+DFS with 20               |    2       |   835.0     |       851.5     |
+DFS with 50               |    1       |   804.0     |       820.0     |
+GreedySearcher            |    8       |   35.0      |       89.5      |
+GreedySearcher(Heuristic) |   10       |   35.0      |       89.5      |
+A*                        |   10       |   10.0      |       17.3      |
+A* (Heuristic of 2)       |   10       |   10.0      |       17.3      |
+
+15-move
+-------------------------------------
+algorithm              num. solved     avg. moves    avg. states tested
+----------------------------------------------------------------------
+random                 |    3       |   17.6      |     3097.0      |
+BFS                    |    5       |   15.0      |    12294.0      |
+DFS with 20            |    0       |     0       |         0       |
+DFS with 50            |    0       |     0       |         0       |
+GreedySearcher         |   10       |   75.2      |       252.8     |
+GreedySearcher(2)      |   10       |   75.2      |       252.8     |
+A*                     |   10       |   15.0      |       315.8     |
+A* (2)                 |   10       |   15.0      |       101.7     |
+
+
+    Based on the results of the tables, it shows how similar some of these search methods
+    in this problem that we have used. In each table, it shows that the values for the DFS with
+    a heuristic of 20 and of 50 have close results. It also shows that the GreedySearcher and AStarSeacher
+    have very close values in terms of number of puzzles solved, but are the same in terms of the average
+    moves and average of states tested. The A* Searcher's values are also noticeably smaller than
+    the values in the GreedySearcher and the DHS values. This also shows how the BFS values are the largest
+    in each case, probably because there were many cases where there were no solution.
+Heuristic Tables:
+
+18 moves
+-------------------------------------
+algorithm              num. solved     avg. moves    avg. states tested
+----------------------------------------------------------------------
+GreedySearcher (-1)    |   10       |  116.2      |      450.0      |
+GreedySearcher (1)     |   10       |  116.2      |      450.0      |
+GreedySearcher (2)     |   10       |  116.2      |      450.0      |
+A* (-1)                |   10       |   18.0      |      359.0      |
+A* (1)                 |   10       |   18.0      |      359.0      |
+A* (2)                 |   10       |   18.0      |      359.0      |
+
+
+21 moves
+-------------------------------------
+algorithm              num. solved     avg. moves    avg. states tested
+----------------------------------------------------------------------
+GreedySearcher (-1)    |   10       |  104.0      |      379.9      |
+GreedySearcher (1)     |   10       |  104.0      |      379.9      |
+GreedySearcher (2)     |   10       |  104.0      |      379.9      |
+A* (-1)                |   10       |   21.0      |      906.3      |
+A* (1)                 |   10       |   21.0      |      906.3      |
+A* (2)                 |   10       |   21.0      |      906.3      |
+
+
+24 moves
+-------------------------------------
+algorithm              num. solved     avg. moves    avg. states tested
+----------------------------------------------------------------------
+GreedySearcher (-1)    |    5       |  111.0      |      403.8      |
+GreedySearcher (1)     |    5       |  111.0      |      403.8      |
+GreedySearcher (2)     |    5       |  111.0      |      403.8      |
+A* (-1)                |   10       |   24.0      |     2493.0      |
+A* (1)                 |   10       |   24.0      |     2493.0      |
+A* (2)                 |   10       |   24.0      |     2493.0      |
+
+
+27 moves
+-------------------------------------
+algorithm              num. solved     avg. moves    avg. states tested
+----------------------------------------------------------------------
+GreedySearcher (-1)    |    2       |  129.0      |     1270.5      |
+GreedySearcher (1)     |    2       |  129.0      |     1270.5      |
+GreedySearcher (2)     |    2       |  129.0      |     1270.5      |
+A* (-1)                |    1       |   27.0      |     1239.0      |
+A* (1)                 |    1       |   27.0      |     1239.0      |
+A* (2)                 |    1       |   27.0      |     1239.0      |
+
+
+    The Heuristic I chose was the distance between the current point and the specified point in the
+    currect puzzle. I used a for loop as well as the the mod operator and divide operators to find the distance
+    and took the absolute value of that total. The tests for the Heuristics showed how there were certain
+    cases that it did not matter in terms of what the heuristic was, in terms of the value, because each
+    value for each test case for the file was the same. However, as the number of moves for each file grew larger,
+    the values of the number of puzzles solved kept decreasing, as well as the number of average states somewhat increasing.
+    The heuristic tests also showed how the AStar Searcher's average moves were lesser in value than the average
+    moves in the Greedy Searcher. 
